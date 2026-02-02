@@ -5,31 +5,35 @@
   box-sizing: border-box;
 }
 
-/* FONT */
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: #f9f9f9;
-  color: #111;
-  line-height: 1.5;
+/* PALETTE COLORI BRAND */
+:root {
+  --blu: #2a92d8;          /* Blu acceso */
+  --giallo: #f4b400;       /* Giallo arancio */
+  --rosso: #d84315;        /* Rosso vivo */
+  --verde: #3aa655;        /* Verde naturale */
+  --nero: #111111;         /* Nero testo */
+  --grigio-scuro: #333333; /* Grigio per testo secondario */
+  --bianco: #ffffff;       /* Bianco */
+  --grigio-chiaro: #f9f9f9;/* Sfondo chiaro */
 }
 
-/* COLORI BRAND */
-:root {
-  --blu: #1f6fae;
-  --giallo: #f4b400;
-  --rosso: #d84315;
-  --nero: #111;
-  --bianco: #fff;
+/* FONT BASE */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--grigio-chiaro);
+  color: var(--nero);
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 /* HEADER */
 .site-header {
   background: var(--bianco);
-  border-bottom: 2px solid var(--giallo);
+  border-bottom: 3px solid var(--giallo);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(42, 146, 216, 0.3);
 }
 
 .header-container {
@@ -49,11 +53,11 @@ body {
   text-decoration: none;
   color: var(--nero);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .logo img {
-  height: 40px;
+  height: 45px;
 }
 
 /* NAV */
@@ -66,8 +70,9 @@ body {
 .nav-list a {
   text-decoration: none;
   color: var(--nero);
-  font-weight: 500;
-  transition: color 0.3s;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-size: 1rem;
 }
 
 .nav-list a:hover {
@@ -75,7 +80,7 @@ body {
 }
 
 .cart {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 /* HAMBURGER */
@@ -85,6 +90,7 @@ body {
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
+  color: var(--nero);
 }
 
 /* MOBILE */
@@ -115,13 +121,50 @@ body {
 }
 
 /* MAIN CONTENT */
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
 main h1 {
-  font-size: 2rem;
-  color: var(--blu);
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: var(--rosso);
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 main p {
+  color: var(--grigio-scuro);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* BUTTONS */
+button, .btn {
+  background-color: var(--verde);
+  color: var(--bianco);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   font-size: 1rem;
-  color: #333;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--blu);
+}
+
+/* FOOTER (se vuoi aggiungere) */
+footer {
+  background: var(--blu);
+  color: var(--bianco);
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  letter-spacing: 0.05em;
 }
