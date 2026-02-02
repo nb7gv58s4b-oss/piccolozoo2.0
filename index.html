@@ -1,118 +1,215 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Piccolo Zoo 2.0 – Ornitologia</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Il tuo negozio di uccelli</title>
+    <style>
+        /* STESSO STILE DELLE ALTRE PAGINE */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+            font-size: 2rem;
+        }
+        .container {
+            padding: 2rem;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: contain;
+        }
+        .card h3 {
+            margin: 0.5rem 0;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .card button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin-top: 0.5rem;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .card button:hover {
+            background-color: #45a049;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .feature {
+            background-color: white;
+            padding: 1rem;
+            text-align: center;
+            flex: 1 1 200px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-container">
-      <!-- LOGO -->
-      <a href="index.html" class="logo" aria-label="Piccolo Zoo 2.0">
-        <img src="logo-navbar.png" alt="Logo Piccolo Zoo 2.0" />
-        <span>Piccolo Zoo 2.0</span>
-      </a>
+    <!-- HEADER -->
+    <header>
+        <h1>Il tuo negozio di uccelli</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="alimenti.html">Alimenti</a>
+        <a href="integratori.html">Integratori</a>
+        <a href="accessori.html">Accessori</a>
+        <a href="gabbie.html">Gabbie</a>
+        <a href="cura e igiene.html">Cura e Igiene</a>
+        <a href="avicoli.html">Avicoli</a>
+        <a href="altrianimali.html">Altri Animali</a>
+        <a href="contatti.html">Contatti</a>
+    </nav>
 
-      <!-- NAV -->
-      <nav class="nav" role="navigation" aria-label="Menu principale">
-        <ul class="nav-list">
-          <li><a href="alimenti.html">Alimenti</a></li>
-          <li><a href="integratori.html">Integratori</a></li>
-          <li><a href="accessori.html">Accessori</a></li>
-          <li><a href="gabbie.html">Gabbie</a></li>
-          <li><a href="cura-igiene.html">Cura e Igiene</a></li>
-          <li><a href="avicoli.html">Avicoli</a></li>
-          <li><a href="altri-animali.html">Altri Animali</a></li>
-          <li><a href="contatti.html" class="cart">🛒</a></li>
-        </ul>
-      </nav>
-
-      <!-- HAMBURGER -->
-      <button class="menu-toggle" aria-label="Apri menu">☰</button>
+    <!-- HERO -->
+    <div class="hero">
+        Benvenuto nel mondo dei tuoi pennuti!
     </div>
-  </header>
 
-  <main>
-    <section
-      id="alimenti"
-      tabindex="-1"
-      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
-    >
-      <h2>Alimenti</h2>
-      <p>Selezione di cibi di qualità per uccelli e altri animali.</p>
-    </section>
+    <div class="container">
+        <!-- CATEGORIE PRINCIPALI -->
+        <h2>Esplora le categorie</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Alimenti">
+                <h3>Alimenti</h3>
+                <p>Miscele e pastoncini selezionati per tutte le specie.</p>
+                <button onclick="location.href='alimenti.html'">Scopri</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Integratori">
+                <h3>Integratori</h3>
+                <p>Vitamine, minerali e proteine per il benessere dei tuoi uccelli.</p>
+                <button onclick="location.href='integratori.html'">Scopri</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Accessori">
+                <h3>Accessori</h3>
+                <p>Tutto il necessario per gabbie e voliere, dalla sicurezza al comfort.</p>
+                <button onclick="location.href='accessori.html'">Scopri</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Gabbie">
+                <h3>Gabbie e voliere</h3>
+                <p>Soluzioni di qualità per ogni specie e spazio disponibile.</p>
+                <button onclick="location.href='gabbie.html'">Scopri</button>
+            </div>
+        </div>
 
-    <section
-      id="integratori"
-      tabindex="-1"
-      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
-    >
-      <h2>Integratori</h2>
-      <p>Prodotti per integrare la dieta e mantenere la salute dei tuoi amici piumati.</p>
-    </section>
+        <!-- PRODOTTI IN EVIDENZA -->
+        <h2>Prodotti in evidenza</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Prodotto 1">
+                <h3>Prodotto 1</h3>
+                <p>Descrizione breve del prodotto 1.</p>
+                <button>Aggiungi al carrello</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Prodotto 2">
+                <h3>Prodotto 2</h3>
+                <p>Descrizione breve del prodotto 2.</p>
+                <button>Aggiungi al carrello</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Prodotto 3">
+                <h3>Prodotto 3</h3>
+                <p>Descrizione breve del prodotto 3.</p>
+                <button>Aggiungi al carrello</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Prodotto 4">
+                <h3>Prodotto 4</h3>
+                <p>Descrizione breve del prodotto 4.</p>
+                <button>Aggiungi al carrello</button>
+            </div>
+        </div>
 
-    <section
-      id="accessori"
-      tabindex="-1"
-      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
-    >
-      <h2>Accessori</h2>
-      <p>Gabbiette, giocattoli e tutto il necessario per il comfort dei tuoi animali.</p>
-    </section>
+        <!-- VANTAGGI / SERVIZI -->
+        <h2>I nostri vantaggi</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Prodotti di qualità</h3>
+                <p>Selezioniamo solo fornitori certificati per garantire sicurezza e benessere dei tuoi uccelli.</p>
+            </div>
+            <div class="feature">
+                <h3>Spedizione veloce</h3>
+                <p>Consegna rapida direttamente a casa tua, in tutta Italia.</p>
+            </div>
+            <div class="feature">
+                <h3>Assistenza esperta</h3>
+                <p>Supporto dedicato e consigli professionali per alimentazione e cura.</p>
+            </div>
+        </div>
+    </div>
 
-    <section
-      id="gabbie"
-      tabindex="-1"
-      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
-    >
-      <h2>Gabbie</h2>
-      <p>Ampia scelta di gabbie per tutte le esigenze e dimensioni.</p>
-    </section>
-
-    <section
-      id="cura-igiene"
-      tabindex="-1"
-      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
-    >
-      <h2>Cura e Igiene</h2>
-      <p>Prodotti per la pulizia e la cura degli animali domestici.</p>
-    </section>
-
-    <section
-      id="avicoli"
-      tabindex="-1"
-      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
-    >
-      <h2>Avicoli</h2>
-      <p>Alimenti e accessori per uccelli da allevamento e ornamentali.</p>
-    </section>
-
-    <section
-      id="altri-animali"
-      tabindex="-1"
-      style="padding: 40px 20px; max-width: 1200px; margin: auto; margin-bottom: 60px;"
-    >
-      <h2>Altri Animali</h2>
-      <p>Prodotti per gatti, cani, conigli e altri piccoli animali domestici.</p>
-    </section>
-  </main>
-
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', () => nav.classList.toggle('open'));
-  </script>
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Il tuo negozio di uccelli - Tutti i diritti riservati
+    </footer>
 </body>
 </html>
