@@ -1,59 +1,118 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Piccolo Zoo 2.0 – Ornitologia</title>
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="header-container">
+      <!-- LOGO -->
+      <a href="index.html" class="logo" aria-label="Piccolo Zoo 2.0">
+        <img src="logo-navbar.png" alt="Logo Piccolo Zoo 2.0" />
+        <span>Piccolo Zoo 2.0</span>
+      </a>
 
-<header class="site-header">
-  <div class="header-container">
+      <!-- NAV -->
+      <nav class="nav" role="navigation" aria-label="Menu principale">
+        <ul class="nav-list">
+          <li><a href="#alimenti">Alimenti</a></li>
+          <li><a href="#integratori">Integratori</a></li>
+          <li><a href="#accessori">Accessori</a></li>
+          <li><a href="#gabbie">Gabbie</a></li>
+          <li><a href="#cura-igiene">Cura e Igiene</a></li>
+          <li><a href="#avicoli">Avicoli</a></li>
+          <li><a href="#altri-animali">Altri Animali</a></li>
+          <li><a href="#contatti" class="cart">🛒</a></li>
+        </ul>
+      </nav>
 
-    <!-- LOGO -->
-    <a href="index.html" class="logo">
-      <img src="logo-navbar.png" alt="Piccolo Zoo 2.0">
-      <span>Piccolo Zoo 2.0</span>
-    </a>
+      <!-- HAMBURGER -->
+      <button class="menu-toggle" aria-label="Apri menu">☰</button>
+    </div>
+  </header>
 
-    <!-- NAV -->
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#categorie">Categorie</a></li>
-        <li><a href="#about">Chi siamo</a></li>
-        <li><a href="#contatti">Contatti</a></li>
-        <li><a href="#carrello" class="cart">🛒</a></li>
-      </ul>
-    </nav>
+  <main>
+    <section
+      id="alimenti"
+      tabindex="-1"
+      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
+    >
+      <h2>Alimenti</h2>
+      <p>Selezione di cibi di qualità per uccelli e altri animali.</p>
+    </section>
 
-    <!-- HAMBURGER -->
-    <button class="menu-toggle" aria-label="Apri menu">☰</button>
+    <section
+      id="integratori"
+      tabindex="-1"
+      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
+    >
+      <h2>Integratori</h2>
+      <p>Prodotti per integrare la dieta e mantenere la salute dei tuoi amici piumati.</p>
+    </section>
 
-  </div>
-</header>
+    <section
+      id="accessori"
+      tabindex="-1"
+      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
+    >
+      <h2>Accessori</h2>
+      <p>Gabbiette, giocattoli e tutto il necessario per il comfort dei tuoi animali.</p>
+    </section>
 
-<main style="padding: 60px 20px; max-width: 1200px; margin: auto;">
-  <h1>Specialisti in ornitologia</h1>
-  <p>
-    Piccolo Zoo 2.0 – negozio storico di Avola (SR).  
-    Vendita di prodotti selezionati per l’alimentazione e la cura degli uccelli.
-  </p>
-</main>
+    <section
+      id="gabbie"
+      tabindex="-1"
+      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
+    >
+      <h2>Gabbie</h2>
+      <p>Ampia scelta di gabbie per tutte le esigenze e dimensioni.</p>
+    </section>
 
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
-  toggle.addEventListener('click', () => nav.classList.toggle('open'));
-</script>
+    <section
+      id="cura-igiene"
+      tabindex="-1"
+      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
+    >
+      <h2>Cura e Igiene</h2>
+      <p>Prodotti per la pulizia e la cura degli animali domestici.</p>
+    </section>
 
+    <section
+      id="avicoli"
+      tabindex="-1"
+      style="padding: 40px 20px; max-width: 1200px; margin: auto;"
+    >
+      <h2>Avicoli</h2>
+      <p>Alimenti e accessori per uccelli da allevamento e ornamentali.</p>
+    </section>
+
+    <section
+      id="altri-animali"
+      tabindex="-1"
+      style="padding: 40px 20px; max-width: 1200px; margin: auto; margin-bottom: 60px;"
+    >
+      <h2>Altri Animali</h2>
+      <p>Prodotti per gatti, cani, conigli e altri piccoli animali domestici.</p>
+    </section>
+  </main>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
 </body>
 </html>
