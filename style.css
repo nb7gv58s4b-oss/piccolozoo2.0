@@ -7,14 +7,14 @@
 
 /* PALETTE COLORI BRAND */
 :root {
-  --blu: #2a92d8;          /* Blu acceso */
-  --giallo: #f4b400;       /* Giallo arancio */
-  --rosso: #d84315;        /* Rosso vivo */
-  --verde: #3aa655;        /* Verde naturale */
-  --nero: #111111;         /* Nero testo */
-  --grigio-scuro: #333333; /* Grigio per testo secondario */
-  --bianco: #ffffff;       /* Bianco */
-  --grigio-chiaro: #f9f9f9;/* Sfondo chiaro */
+  --blu: #2a92d8;
+  --giallo: #f4b400;
+  --rosso: #d84315;
+  --verde: #3aa655;
+  --nero: #111111;
+  --grigio-scuro: #333333;
+  --bianco: #ffffff;
+  --grigio-chiaro: #f9f9f9;
 }
 
 /* FONT BASE */
@@ -39,25 +39,31 @@ body {
 .header-container {
   max-width: 1200px;
   margin: auto;
-  padding: 12px 20px;
+  padding: 16px 20px; /* più aria per il logo */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* LOGO */
+/* LOGO – INGRANDITO E PIÙ LEGGIBILE */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   text-decoration: none;
-  color: var(--nero);
+  color: var(--rosso);
   font-weight: 700;
-  font-size: 1.3rem;
 }
 
 .logo img {
-  height: 45px;
+  height: 65px; /* LOGO PIÙ GRANDE */
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.7rem; /* TESTO PIÙ VISIBILE */
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 /* NAV */
@@ -95,13 +101,21 @@ body {
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .logo img {
+    height: 48px; /* ridotto ma sempre leggibile */
+  }
+
+  .logo span {
+    font-size: 1.3rem;
+  }
+
   .menu-toggle {
     display: block;
   }
 
   .nav {
     position: absolute;
-    top: 70px;
+    top: 85px; /* adattato al logo più grande */
     right: 0;
     background: var(--bianco);
     width: 100%;
@@ -158,7 +172,7 @@ button:hover, .btn:hover {
   background-color: var(--blu);
 }
 
-/* FOOTER (se vuoi aggiungere) */
+/* FOOTER */
 footer {
   background: var(--blu);
   color: var(--bianco);
