@@ -1,0 +1,127 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FONT */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f9f9f9;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* COLORI BRAND */
+:root {
+  --blu: #1f6fae;
+  --giallo: #f4b400;
+  --rosso: #d84315;
+  --nero: #111;
+  --bianco: #fff;
+}
+
+/* HEADER */
+.site-header {
+  background: var(--bianco);
+  border-bottom: 2px solid var(--giallo);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--nero);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* NAV */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--nero);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: var(--blu);
+}
+
+.cart {
+  font-size: 1.2rem;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--bianco);
+    width: 100%;
+    display: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .nav.open {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+}
+
+/* MAIN CONTENT */
+main h1 {
+  font-size: 2rem;
+  color: var(--blu);
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 1rem;
+  color: #333;
+}
