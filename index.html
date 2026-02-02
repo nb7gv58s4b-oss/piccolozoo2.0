@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piccolo Zoo 2.0 – Ornitologia</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <img src="logo-navbar.png" alt="Piccolo Zoo 2.0">
+      <span>Piccolo Zoo 2.0</span>
+    </a>
+
+    <!-- NAV -->
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#categorie">Categorie</a></li>
+        <li><a href="#about">Chi siamo</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+        <li><a href="#carrello" class="cart">🛒</a></li>
+      </ul>
+    </nav>
+
+    <!-- HAMBURGER -->
+    <button class="menu-toggle" aria-label="Apri menu">☰</button>
+
+  </div>
+</header>
+
+<main style="padding: 60px 20px; max-width: 1200px; margin: auto;">
+  <h1>Specialisti in ornitologia</h1>
+  <p>
+    Piccolo Zoo 2.0 – negozio storico di Avola (SR).  
+    Vendita di prodotti selezionati per l’alimentazione e la cura degli uccelli.
+  </p>
+</main>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+</script>
+
+</body>
+</html>
