@@ -1,0 +1,39 @@
+<main>
+  <h1>Carrello</h1>
+  <div id="cart-items"></div>
+  <h2 id="cart-total"></h2>
+</main>
+
+<script src="cart.js"></script>
+<script>
+  const items = document.getElementById("cart-items");
+  const totalEl = document.getElementById("cart-total");
+
+  if (cart.length === 0) {
+    items.innerHTML = "<p>Il carrello è vuoto</p>";
+  } else {
+    let totale = 0;
+
+    cart.forEach((p, i) => {
+      totale += p.prezzo * p.quantita;
+
+      items.innerHTML += `
+        <div class="product-card">
+          <img src="${p.img}" class="product-img">
+          <h3>${p.nome}</h3>
+          <p>Prezzo: €${p.prezzo}</p>
+          <p>Quantità: ${p.quantita}</p>
+          <button onclick="removeItem(${i})">Rimuovi</button>
+        </div>
+      `;
+    });
+
+    totalEl.textContent = "Totale: €" + totale.toFixed(2);
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload();
+  }
+</script>
