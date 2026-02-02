@@ -1,1 +1,401 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Altri Animali – Piccolo Zoo 2.0</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* STILI SPECIFICI PER LE SCHEDA PRODOTTO */
+
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px 60px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .category-intro {
+      margin-bottom: 30px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 140px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      background: #f7f7f7;
+    }
+
+    .product-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #d84315; /* rosso brand */
+    }
+
+    .product-desc {
+      flex-grow: 1;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .product-price {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: #1f6fae; /* blu brand */
+    }
+
+    .btn-add-cart {
+      background-color: #3aa655; /* verde brand */
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-add-cart:hover {
+      background-color: #2a92d8; /* blu brand */
+    }
+
+    /* Responsive tweak */
+    @media (max-width: 500px) {
+      .product-img {
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="Piccolo Zoo 2.0">
+        <img src="logo-navbar.png" alt="Logo Piccolo Zoo 2.0" />
+        <span>Piccolo Zoo 2.0</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Menu principale">
+        <ul class="nav-list">
+          <li><a href="alimenti.html" class="active">Alimenti</a></li>
+          <li><a href="integratori.html">Integratori</a></li>
+          <li><a href="accessori.html">Accessori</a></li>
+          <li><a href="gabbie.html">Gabbie</a></li>
+          <li><a href="cura-igiene.html">Cura e Igiene</a></li>
+          <li><a href="avicoli.html">Avicoli</a></li>
+          <li><a href="altri-animali.html">Altri Animali</a></li>
+          <li><a href="#contatti" class="cart">🛒</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Apri menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="category-intro">
+      <h1>Altri Animali</h1>
+      <p>Questa sezione è dedicata ai prodotti per la gestione e il benessere degli animali domestici, tra cui cani, gatti, conigli e roditori. La selezione comprende alimenti formulati, integratori nutrizionali, accessori tecnici e articoli per l’arricchimento ambientale, scelti per supportare le esigenze fisiologiche e comportamentali delle diverse specie. L’offerta è pensata per garantire una soluzione completa e funzionale sia per l’utilizzatore domestico che per l’allevatore.</p>
+    </section>
+
+    <section class="products-grid">
+      <!-- 30 schede prodotto -->
+      <!-- Ti lascio con immagini placeholder e testi da sostituire -->
+
+      <!-- Prodotto 1 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+1"
+          alt="Nome prodotto 1"
+        />
+        <h2 class="product-name">Nome prodotto 1</h2>
+        <p class="product-desc">Descrizione breve del prodotto 1 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 1 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 2 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+2"
+          alt="Nome prodotto 2"
+        />
+        <h2 class="product-name">Nome prodotto 2</h2>
+        <p class="product-desc">Descrizione breve del prodotto 2 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 2 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 3 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+3"
+          alt="Nome prodotto 3"
+        />
+        <h2 class="product-name">Nome prodotto 3</h2>
+        <p class="product-desc">Descrizione breve del prodotto 3 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 3 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 4 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+4"
+          alt="Nome prodotto 4"
+        />
+        <h2 class="product-name">Nome prodotto 4</h2>
+        <p class="product-desc">Descrizione breve del prodotto 4 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 4 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 5 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+5"
+          alt="Nome prodotto 5"
+        />
+        <h2 class="product-name">Nome prodotto 5</h2>
+        <p class="product-desc">Descrizione breve del prodotto 5 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 5 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 6 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+6"
+          alt="Nome prodotto 6"
+        />
+        <h2 class="product-name">Nome prodotto 6</h2>
+        <p class="product-desc">Descrizione breve del prodotto 6 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 6 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 7 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+7"
+          alt="Nome prodotto 7"
+        />
+        <h2 class="product-name">Nome prodotto 7</h2>
+        <p class="product-desc">Descrizione breve del prodotto 7 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 7 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 8 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+8"
+          alt="Nome prodotto 8"
+        />
+        <h2 class="product-name">Nome prodotto 8</h2>
+        <p class="product-desc">Descrizione breve del prodotto 8 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 8 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 9 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+9"
+          alt="Nome prodotto 9"
+        />
+        <h2 class="product-name">Nome prodotto 9</h2>
+        <p class="product-desc">Descrizione breve del prodotto 9 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 9 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 10 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+10"
+          alt="Nome prodotto 10"
+        />
+        <h2 class="product-name">Nome prodotto 10</h2>
+        <p class="product-desc">Descrizione breve del prodotto 10 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 10 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 11 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+11"
+          alt="Nome prodotto 11"
+        />
+        <h2 class="product-name">Nome prodotto 11</h2>
+        <p class="product-desc">Descrizione breve del prodotto 11 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 11 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 12 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+12"
+          alt="Nome prodotto 12"
+        />
+        <h2 class="product-name">Nome prodotto 12</h2>
+        <p class="product-desc">Descrizione breve del prodotto 12 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 12 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 13 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+13"
+          alt="Nome prodotto 13"
+        />
+        <h2 class="product-name">Nome prodotto 13</h2>
+        <p class="product-desc">Descrizione breve del prodotto 13 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 13 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 14 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+14"
+          alt="Nome prodotto 14"
+        />
+        <h2 class="product-name">Nome prodotto 14</h2>
+        <p class="product-desc">Descrizione breve del prodotto 14 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 14 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 15 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+15"
+          alt="Nome prodotto 15"
+        />
+        <h2 class="product-name">Nome prodotto 15</h2>
+        <p class="product-desc">Descrizione breve del prodotto 15 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 15 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 16 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+16"
+          alt="Nome prodotto 16"
+        />
+        <h2 class="product-name">Nome prodotto 16</h2>
+        <p class="product-desc">Descrizione breve del prodotto 16 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 16 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 17 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+17"
+          alt="Nome prodotto 17"
+        />
+        <h2 class="product-name">Nome prodotto 17</h2>
+        <p class="product-desc">Descrizione breve del prodotto 17 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 17 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 18 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+18"
+          alt="Nome prodotto 18"
+        />
+        <h2 class="product-name">Nome prodotto 18</h2>
+        <p class="product-desc">Descrizione breve del prodotto 18 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 18 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 19 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+19"
+          alt="Nome prodotto 19"
+        />
+        <h2 class="product-name">Nome prodotto 19</h2>
+        <p class="product-desc">Descrizione breve del prodotto 19 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 19 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 20 -->
+      <article class="product-card">
+        <img
+          class="product-img"
+          src="https://via.placeholder.com/300x140?text=Prodotto+20"
+          alt="Nome prodotto 20"
+        />
+        <h2 class="product-name">Nome prodotto 20</h2>
+        <p class="product-desc">Descrizione breve del prodotto 20 da inserire qui.</p>
+        <div class="product-price">€0,00</div>
+        <button class="btn-add-cart" aria-label="Aggiungi prodotto 20 al carrello">Aggiungi al carrello</button>
+      </article>
+
+      <!-- Prodotto 21 -->
+     
 
